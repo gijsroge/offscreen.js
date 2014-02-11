@@ -7,8 +7,8 @@ Detects if an element falls of the right side of your screen
 Adds a class "offscreen" to all your elements with the defined selector that fall of the right side of the screen. 
 
 <dl>
-  <dd>checks all the elements with the defined selector.</dd>
-  <dt>rechecks everything when resize (optimized resize)</dt>
+  <dd>• checks all the elements with the defined selector.</dd>
+  <dd>• rechecks everything when resize (optimized resize)</dd>
 </dl>
 
 
@@ -18,5 +18,7 @@ $( document ).ready(function() {
   $('yourelements').offscreen();
 });   
 ```
+
+#### [demo](http://gijsroge.github.io/offscreen.js)
 
 [@GijsRoge](https://twitter.com/GijsRoge)
