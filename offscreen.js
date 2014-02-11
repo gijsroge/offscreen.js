@@ -1,5 +1,4 @@
 $.fn.offscreen = function() {
-    //set default options
     var $this = $(this);
     function offscreenInitiate(){
         var windowWidth = $(window).width();
