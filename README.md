@@ -4,6 +4,9 @@ offscreen.js
 Detects if an element falls of the right side of your screen
 
 
+#### [demo](http://gijsroge.github.io/offscreen.js)
+
+
 #### What does it do?
 Adds a class "offscreen" to all your elements with the defined selector that fall of the right side of the screen. 
 
@@ -13,9 +16,6 @@ Adds a class "offscreen" to all your elements with the defined selector that fal
   <dd>• smartresize to increase performance</dd>
   <dd>• customize classes</dd>
 </dl>
-
-#### [demo](http://gijsroge.github.io/offscreen.js)
-
 
 #### Usage:
 ```
