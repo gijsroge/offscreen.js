@@ -13,4 +13,4 @@ $( document ).ready(function() {
 });   
 ```
 
-[I'm an inline-style link](https://twitter.com/GijsRoge)
+[@GijsRoge](https://twitter.com/GijsRoge)
