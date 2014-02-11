@@ -19,6 +19,11 @@ $( document ).ready(function() {
 });   
 ```
 
+#### Requires:
+```
+jQuery
+```
+
 #### [demo](http://gijsroge.github.io/offscreen.js)
 
 [@GijsRoge](https://twitter.com/GijsRoge)
