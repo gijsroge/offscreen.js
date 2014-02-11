@@ -22,10 +22,8 @@ $.fn.offscreen = function(options) {
 
             if(($(this).offset().left < 0)){
                 $(this).addClass(defaults.leftClass);
-                console.log('fall of left');
             }else if(($(this).offset().left > 0)){
                 $(this).removeClass(defaults.leftClass);
-                console.log('remove left');
             }
         });
     };
@@ -40,12 +38,10 @@ $.fn.offscreen = function(options) {
       (function(e,t){var n=function(e,t,n){var r;return function(){function u(){if(!n)e.apply(s,o);r=null}var s=this,o=arguments;if(r)clearTimeout(r);else if(n)e.apply(s,o);r=setTimeout(u,t||100)}};jQuery.fn[t]=function(e){return e?this.bind("resize",n(e)):this.trigger(t)}})(jQuery,"smartresize");
       
       $(window).smartresize(function(){
-        console.log('smart resize');
         offscreenInitiate();
       });
     }else{
       $( window ).resize(function() {
-        console.log('resize');
         offscreenInitiate();
       });
     }
