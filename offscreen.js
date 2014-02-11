@@ -21,8 +21,10 @@ $.fn.offscreen = function(options) {
             }
 
             if(($(this).offset().left < 0)){
+                console.log('added');
                 $(this).addClass(defaults.leftClass);
-            }else if(($(this).offset().left > 0)){
+            }else if(($(this).offset().left * 2 > $(this).outerWidth())){
+                console.log('removed');
                 $(this).removeClass(defaults.leftClass);
             }
         });
