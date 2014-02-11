@@ -1,7 +1,7 @@
 offscreen.js
 =========
 
-Detects if an element falls of the right side of your screen
+Detects if an element falls of the right/side side of your screen
 
 
 #### [demo](http://gijsroge.github.io/offscreen.js)
