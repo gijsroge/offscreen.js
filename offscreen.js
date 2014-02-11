@@ -5,10 +5,8 @@ $.fn.offscreen = function() {
         var windowWidth = $(window).width();
         $($this).each(function(){
             if(windowWidth < ($(this).offset().left + $(this).outerWidth())){
-                console.log('if true');
                 $(this).addClass('offviewport');
             }else if(windowWidth > ($(this).offset().left + $(this).outerWidth() * 2)){
-                console.log('else if true');
                 $(this).removeClass('offviewport');
             }
         });
