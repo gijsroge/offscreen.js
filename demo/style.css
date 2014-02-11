@@ -4,11 +4,23 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;   
 }
+body{
+	font-family: 'helvetica', 'Open Sans', arial;
+}
+.center{
+	text-align: center;
+}
+header{
+	margin: 6em 0;
+}
+p{
+	margin: 0.5em 0;
+}
 .item{
-	display: inline-block;
-	width: 200px;
+	float: left;
+	width: 23%;
 	height: 200px;
-	margin: 1em;
+	margin: 1%;
 	position: relative;
 	background: #eee;
 }
@@ -45,6 +57,10 @@
 	z-index: 2;
 }
 
-.tooltip__content.tooltip__edge{
+.tooltip__content.right-edge{
 	left: -100%;
+}
+
+.tooltip__content.left-edge{
+	left: 100%;
 }
