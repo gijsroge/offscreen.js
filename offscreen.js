@@ -1,7 +1,7 @@
 (function ( $ ) { 
 
-    $.fn.offscreen = function(options) {
-        
+   $.fn.offscreen = function(options) {
+
         //set default options
         var defaults = {
             rightClass: 'right-edge',
@@ -16,17 +16,17 @@
         function offscreenInitiate(){
             var windowWidth = $(window).width();
             $($this).each(function(){
-                if(windowWidth < ($(this).offset().left + $(this).outerWidth())){
+                left = $(this).offset().left;
+                width = $(this).outerWidth();
+                if(windowWidth < (left + width)){
                     $(this).addClass(defaults.rightClass);
-                }else if(windowWidth > ($(this).offset().left + $(this).outerWidth() * 1.5)){
+                }else if(windowWidth > (left + width * 1.5)){
                     $(this).removeClass(defaults.rightClass);
                 }
 
-                if(($(this).offset().left < 0)){
-                    console.log('added');
+                if((left < 0)){
                     $(this).addClass(defaults.leftClass);
-                }else if(($(this).offset().left * 2 > $(this).outerWidth())){
-                    console.log('removed');
+                }else if((left * 2 > width)){
                     $(this).removeClass(defaults.leftClass);
                 }
             });
@@ -49,5 +49,7 @@
             offscreenInitiate();
           });
         }
+        
     }
+
 }( jQuery ));
