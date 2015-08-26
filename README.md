@@ -24,6 +24,7 @@ $( document ).ready(function() {
     leftClass: 'left-edge',
     topClass: 'top-edge',
     bottomClass: 'bottom-edge',
+    widthOffset: 40, //px value
     smartResize: true
   });
 });   
