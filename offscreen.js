@@ -1,4 +1,4 @@
-/*! Offscreen.js | (c) 2015 @gijsroge | MIT license | https://github.com/gijsroge/offscreen.js */
+/*! Offscreen.js | (c) 2016 @gijsroge | MIT license | https://github.com/gijsroge/offscreen.js */
 (function ( $ ) {
 
     $.fn.offscreen = function(options) {
