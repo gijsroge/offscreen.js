@@ -1,0 +1,12 @@
+{
+  "name": "offscreen.js",
+  "version": "1.0.0",
+  "description": "Detects if an element falls of the viewport of your screen.",
+  "main": "offscreen.js",
+  "repository": {
+    "url": "git@github.com:gijsroge/offscreen.js.git",
+    "type": "git"
+  },
+  "author": "Gijs Rogé <rogegijs@gmail.com>",
+  "license": "MIT"
+}
