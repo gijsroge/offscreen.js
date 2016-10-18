@@ -15,13 +15,12 @@
 
     //call in the default otions
     var options = $.extend(defaults, options);
-
     var $this = $(this);
+
     function offscreenInitiate(){
       var windowWidth = $(window).width();
       var windowHeight = $(window).height();
       $($this).each(function(){
-
 
         /**
          * Check if element falls off top or bottom viewport
@@ -77,5 +76,7 @@
     }
 
   }
+
+  $('[data-offscreen]').offscreen();
 
 }( jQuery ));
