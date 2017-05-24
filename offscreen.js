@@ -15,12 +15,13 @@
 
     //call in the default otions
     var options = $.extend(defaults, options);
-    var $this = $(this);
+    var _this = this;
 
-    function offscreenInitiate(){
-      var windowWidth = $(window).width();
-      var windowHeight = $(window).height();
-      $($this).each(function(){
+    this.offscreenInitiate = function(){
+      $(_this).each(function(){
+
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
 
         /**
          * Check if element falls off top or bottom viewport
@@ -47,6 +48,8 @@
         var width = $(this).outerWidth() + defaults.offset;
         if(windowWidth < (left + width)){
           $(this).addClass(defaults.rightClass);
+        }else{
+          $(this).removeClass(defaults.rightClass);
         }
 
         if((left < 0)){
@@ -58,7 +61,7 @@
     };
 
     //get the ball rolling
-    offscreenInitiate();
+    this.offscreenInitiate();
 
     if(defaults.smartResize === true){
 
@@ -67,13 +70,15 @@
       (function(e,t){var n=function(e,t,n){var r;return function(){function u(){if(!n)e.apply(s,o);r=null}var s=this,o=arguments;if(r)clearTimeout(r);else if(n)e.apply(s,o);r=setTimeout(u,t||100)}};jQuery.fn[t]=function(e){return e?this.bind("resize",n(e)):this.trigger(t)}})(jQuery,"smartresize");
 
       $(window).smartresize(function(){
-        offscreenInitiate();
+        _this.offscreenInitiate();
       });
     }else{
       $( window ).resize(function() {
-        offscreenInitiate();
+          _this.offscreenInitiate();
       });
     }
+
+    return _this.offscreenInitiate();
 
   }
 
