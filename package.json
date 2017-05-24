@@ -1,6 +1,6 @@
 {
   "name": "offscreen.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Detects if an element falls of the viewport of your screen.",
   "main": "offscreen.js",
   "repository": {
