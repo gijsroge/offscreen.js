@@ -1,39 +1,52 @@
-offscreen.js
-=========
+edgeDetection.js
+================
 
-Detects if an element (tooltip) falls of the right/left/top/bottom side of your screen/viewport
+## Still work in progress.
+
+Detects if an element (e.g. a tooltip) falls of the right/left/top/bottom side of your container (can be any element, including the window).
 
 
 #### [demo](http://gijsroge.github.io/offscreen.js)
-
-
-#### What does it do?
-Adds a class to all your elements with the defined selector that fall of the right/left/top/bottom side of the screen. 
-
 
  - checks all the elements with the defined selector.
  - rechecks everything when resize (optimized resize)
  - customize classes
 
-
 #### Usage:
 ```
-$( document ).ready(function() {
-  $('.tooltip__content').offscreen({
-    rightClass: 'right-edge',
-    leftClass: 'left-edge',
-    topClass: 'top-edge',
-    bottomClass: 'bottom-edge',
-    widthOffset: 40, //px value
-    smartResize: true
-  });
-});   
+import edgeDetection from 'edgeDetection';
+
+new edgeDetection(document.querySelectorAll('.js-edge-detection'), options);
 ```
 
-#### Requires:
+Options (object)
 ```
-jQuery
+{
+    items: '.js-edge-detection-item',
+    test: '.js-edge-detection-test',
+    classes: {
+        rightSide: 'right-edge',
+        leftSide: 'left-edge',
+        topSide: 'top-edge',
+        bottomSide: 'bottom-edge',
+    },
+}
 ```
 
+Example html
+```
+<html class="js-edge-detection">
+    <body>
+        <div class="js-edge-detection-item">content</div>
+        <div class="js-edge-detection-item">content</div>
+        <div class="js-edge-detection-item">content</div>
+    </body>
+
+    <script src="edgeDetection.min.js"></script>
+    <script>
+        new edgeDetection(document.querySelectorAll('.js-edge-detection'), options);
+    </script>
+</html>
+```
 
 [@GijsRoge](https://twitter.com/GijsRoge)
